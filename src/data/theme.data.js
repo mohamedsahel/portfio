@@ -4,7 +4,7 @@ const THEME = {
         background: '#020017',
         text: '#ffffff',
         gradient: ['#ff0000', '#020017'],
-        gray_1: '#f5f5f5',
+        gray_1: '#f0f0f0',
         white: '#ffffff',
     },
     fonts: {

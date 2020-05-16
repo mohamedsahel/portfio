@@ -15,7 +15,7 @@ const GlobalStyles = createGlobalStyle`
 
     html {
         box-sizing: border-box;
-        font-size: 50%;
+        font-size: 56%;
         font-family: ${p => p.theme.fonts.primary};
     }
 
@@ -72,13 +72,13 @@ const GlobalStyles = createGlobalStyle`
 
     @media (min-width: 600px) {
         html {
-            font-size: 62.7%;
+            font-size: 58%;
         }
     }
 
     @media (min-width: 800px) {
         html {
-            font-size: 70%;
+            font-size: 62.1%;
         }
     }
 
