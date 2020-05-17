@@ -2,14 +2,14 @@ import React from 'react'
 
 import GlobalStyles from './global.styles'
 import { ThemeProvider, PortfolioProvider } from './providers'
-import { AboutPage, HomePage } from './pages'
+import { AboutPage, HomePage, ProjectsPage } from './pages'
 
 const App = () => {
   return (
     <PortfolioProvider>
       <ThemeProvider>
         <GlobalStyles />
-        <AboutPage />
+        <ProjectsPage />
       </ThemeProvider>
     </PortfolioProvider>
   )
