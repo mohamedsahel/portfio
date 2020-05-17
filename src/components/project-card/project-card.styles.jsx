@@ -9,7 +9,7 @@ export const Container = styled.div`
     max-width: 50rem;
     text-align: center;
     margin: auto;
-    margin-bottom: 10rem;
+    margin-bottom: 12rem;
 
     @media (min-width: 800px) {
         flex-direction: row;
@@ -38,8 +38,8 @@ export const Image = styled.img`
     border-radius: 1rem;
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
     position: absolute;
-    top: 2%;
-    left: 2%;
+    top: 0;
+    left: 0;
 
     &:first-child {
         top: 24%;
@@ -74,6 +74,7 @@ export const Title = styled.h1`
 export const Description = styled.p`
     font-weight: 300;
     color: ${p => p.theme.colors.gray_1};
+    line-height: 2rem;
 `
 
 export const Links = styled.div`
@@ -92,12 +93,4 @@ export const Links = styled.div`
     @media (min-width: 800px) {
         width: 100%;
     }
-`
-
-export const Button = styled.button`
-    padding: 1.6rem 2rem 1.6rem 2rem;
-    display: inline-block;
-    background: ${p => p.theme.colors.white};
-    border-radius: 6px;
-    border: none;
 `
