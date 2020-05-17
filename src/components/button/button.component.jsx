@@ -39,7 +39,7 @@ const Ripple = ({left, top}) => {
 
 
 
-const Button = ({children, ...props}) => {
+const Button = ({children, onClick, ...props}) => {
     const [ripples, setRipples] = React.useState([])
 
     const handleClick = e => {
@@ -55,6 +55,9 @@ const Button = ({children, ...props}) => {
                 top: y + 'px',
             }
         ])
+
+        if(onClick) onClick()
+        
     }
     
     return (

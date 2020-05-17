@@ -3,13 +3,14 @@ import { animated } from 'react-spring'
 
 
 export const Button = styled.button`
-    padding: 1.6rem 2rem 1.6rem 2rem;
+    padding: 1rem 2rem 1rem 2rem;
     display: inline-block;
     background: ${p => p.theme.colors.white};
     border-radius: 6px;
     border: none;
     position: relative;
     overflow: hidden;
+    color: ${p => p.theme.colors.background};
 
     &:hover {
         background: ${p => p.theme.colors.gray_1};
