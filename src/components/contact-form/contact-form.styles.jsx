@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Form = styled.form`
     width: 100%;
     max-width: 46rem;
-    margin: clamp(2rem, 30vw, 4vw) auto;
+    margin: clamp(2rem, 30vw, 3vw) auto;
     padding: 1.6rem;
 
     button {

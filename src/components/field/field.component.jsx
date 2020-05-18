@@ -7,7 +7,7 @@ const Field = ({label, ...props}) => {
             <S.Label> {label} </S.Label>
             {
                 props.type === 'textArea' ?
-                <S.TextArea rows='4' />
+                <S.TextArea rows='4' {...props} />
                 : <S.Input {...props} />
             }
             

@@ -25,7 +25,9 @@ const Ripple = ({left, top}) => {
     })
 
     React.useEffect(() => {
-        setTimeout(() => setUnmounted(true), time + 500)
+        let id = setTimeout(() => setUnmounted(true), time + 500)
+
+        return () => clearTimeout(id)
     }, [])
 
     return !unmounted && <S.Ripple 
@@ -39,22 +41,24 @@ const Ripple = ({left, top}) => {
 
 
 
-const Button = ({children, onClick, ...props}) => {
+const Button = ({children, onClick, disabeled, ...props}) => {
     const [ripples, setRipples] = React.useState([])
 
     const handleClick = e => {
-        e.persist()
-        const x = e.clientX - e.target.offsetLeft
-        const y = e.clientY - e.target.offsetTop
-
-        setRipples([
-            ...ripples,
-            {
-                id: ripples.length,
-                left: x + 'px',
-                top: y + 'px',
-            }
-        ])
+        if(!disabeled) {
+            e.persist()
+            const x = e.clientX - e.target.offsetLeft
+            const y = e.clientY - e.target.offsetTop
+    
+            setRipples([
+                ...ripples,
+                {
+                    id: ripples.length,
+                    left: x + 'px',
+                    top: y + 'px',
+                }
+            ])
+        }
 
         if(onClick) onClick()
         

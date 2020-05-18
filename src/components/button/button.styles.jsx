@@ -5,6 +5,7 @@ import { animated } from 'react-spring'
 export const Button = styled.button`
     padding: 1rem 2rem 1rem 2rem;
     display: inline-block;
+    text-align: center;
     background: ${p => p.theme.colors.white};
     border-radius: 6px;
     border: none;
