@@ -1,7 +1,7 @@
 import React from 'react'
 import * as S from './aboutpage.styles'
 import { PortfolioContext } from '../../providers'
-
+import { Avatar } from '../../components'
 
 
 const AboutContent = ({children, image}) => {
@@ -9,9 +9,7 @@ const AboutContent = ({children, image}) => {
         <S.Content>
             <header>
                 <span>Const</span>
-                 <img 
-                    src={image}
-                /> 
+                 <Avatar width='11rem' height='11rem' /> 
                 <span>=</span>
                 <span>{'{'}</span>
             </header>

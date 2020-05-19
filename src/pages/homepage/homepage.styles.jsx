@@ -60,16 +60,3 @@ export const Menu = styled.ul`
 export const MenuItem = styled.li`
     font-size: 3rem;
 `
-
-export const Social = styled.div`
-    width: 90%;
-    max-width: 50rem;
-    display: flex;
-    justify-content: space-between;
-
-    svg {
-        width: 2.6rem;
-        height: 2.6rem;
-    }
-`
-

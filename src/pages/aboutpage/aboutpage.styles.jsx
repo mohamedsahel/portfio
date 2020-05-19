@@ -21,12 +21,6 @@ export const Content = styled.div`
         align-items: center;
         margin-bottom: 4rem;
         font-weight: 400;
-
-        img {
-            width: 11rem;
-            height: 11rem;
-            border-radius: 50%;
-        }
     }
 
     footer {

@@ -1,14 +1,14 @@
 import React from 'react'
 import * as S from './homepage.styles'
 import { PortfolioContext } from '../../providers'
-import { default as I } from '../../assests/icons'
+import { SocialLinks, Avatar } from '../../components'
 
 
 const Header = ({...props}) => {
-    const { image, name, job } = React.useContext(PortfolioContext)
+    const { name, job } = React.useContext(PortfolioContext)
     return (
         <S.Header {...props} >
-            <S.Image src={image} />
+            <Avatar width='10rem' height='10rem' />
             <S.Name> {name} </S.Name>
             <S.Job> {job} </S.Job>
         </S.Header>
@@ -26,22 +26,6 @@ const Menu = ({...props}) => {
     )
 }
 
-const Social = ({...props}) => {
-    const { socialLinks } = React.useContext(PortfolioContext)
-    return (
-        <S.Social {...props} >
-            <a href={socialLinks.github} target='_blank' >
-                <I.GithubIcon />
-            </a>
-            <a href={socialLinks.twitter} target='_blank' >
-                <I.TwitterIcon />
-            </a>
-            <a href={socialLinks.linkedin} target='_blank' >
-                <I.LinkedinIcon />
-            </a>
-        </S.Social>
-    )
-}
 
 const HomePage = ({...props}) => {
     return (
@@ -49,7 +33,7 @@ const HomePage = ({...props}) => {
             <S.Content>
                 <Header />
                 <Menu />
-                <Social />
+                <SocialLinks />
             </S.Content>
         </S.Container>
     )
