@@ -22,7 +22,7 @@ export const Container = styled.div`
 
 export const Images = styled.div`
     position: relative;
-    width: 100%;
+    width: min(100%, 40rem);
     height: 50%;
 
     @media (min-width: 800px) {

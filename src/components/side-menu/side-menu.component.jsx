@@ -1,8 +1,10 @@
 import React from 'react'
 import * as S from './side-menu.styles'
 import { useSpring } from 'react-spring'
+import { Link } from 'react-router-dom'
 import { useMediaQuery } from '../../hooks'
 import { Avatar } from '..'
+import I from '../../assests/icons'
 
 const SideMenu = () => {
     const [isExpanded, setExpanded] = React.useState(false)
@@ -16,21 +18,21 @@ const SideMenu = () => {
             width: vwToPixel(100),
             height: vhToPixel(100),
             borderRadius: '0%',
-            bottom: '0px',
+            top: '0px',
             left: '0px',
             
         } : isSmall ? {
-                width: '50px',
-                height: '50px',
+                width: '60px',
+                height: '60px',
                 borderRadius: '50%',
-                left: '20px',
-                bottom: '20px',
+                left: '10px',
+                top: '10px',
             } :
             {
-                width: '50px',
+                width: '60px',
                 height: vhToPixel(100),
                 borderRadius: '0%',
-                bottom: '0px',
+                top: '0px',
                 left: '0px', 
             },
         onRest: () => {
@@ -45,9 +47,19 @@ const SideMenu = () => {
         <S.Container 
         style={style} 
         ref={ref}
-        onClick={() => setExpanded(true)} 
         >
-            <Avatar width='50px' height='50px' />
+            <Link to='/' >
+                <Avatar 
+                width='40px' height='40px' 
+                onClick={() => setExpanded(true)} 
+                />
+            </Link>
+            <S.Nav>
+                <Link to='/about' ><I.AboutIcon  /></Link>
+                <Link to='/projects' ><I.ProjectsIcon  /></Link>
+                <Link to='/contact' ><I.ContactIcon  /></Link>
+            </S.Nav>
+            <S._SocialLinks vertical/>
         </S.Container>
     )
 }

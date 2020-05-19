@@ -80,6 +80,10 @@ const GlobalStyles = createGlobalStyle`
         html {
             font-size: 62.7%;
         }
+
+        section.page {
+          padding-left: 6rem;
+        }
     }
 
 `
