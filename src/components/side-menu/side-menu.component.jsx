@@ -1,57 +1,36 @@
 import React from 'react'
 import * as S from './side-menu.styles'
 import { useSpring } from 'react-spring'
-import { Link } from 'react-router-dom'
+import { ThemeContext } from 'styled-components'
+import { Link, useLocation } from 'react-router-dom'
 import { useMediaQuery } from '../../hooks'
 import { Avatar } from '..'
 import I from '../../assests/icons'
 
 const SideMenu = () => {
-    const [isExpanded, setExpanded] = React.useState(false)
-    const ref = React.useRef(false)
+    const { colors: {background} } = React.useContext(ThemeContext)
+    const { pathname } = useLocation()
+    const isExpanded = pathname === '/'
     const isSmall = useMediaQuery('(max-width: 800px)')
-    const vhToPixel = value => `${(window.innerHeight * value) / 100}px`
-    const vwToPixel = value => `${(window.innerWidth * value) / 100}px`
 
     const style = useSpring({
         to: isExpanded ? {
-            width: vwToPixel(100),
-            height: vhToPixel(100),
-            borderRadius: '0%',
-            top: '0px',
-            left: '0px',
+            boxShadow: `0 0 0rem 150vw gray, 0 0 0rem 150vh gray, 0 0 0rem rgba(255, 255, 255, 0.2)`
             
-        } : isSmall ? {
-                width: '60px',
-                height: '60px',
-                borderRadius: '50%',
-                left: '10px',
-                top: '10px',
-            } :
-            {
-                width: '60px',
-                height: vhToPixel(100),
-                borderRadius: '0%',
-                top: '0px',
-                left: '0px', 
-            },
-        onRest: () => {
-            if (isExpanded && ref.current) {
-                ref.current.style.height = "100vh"
-                ref.current.style.width = "100vw"
-            }
-        }
-        })
+        } : {
+            boxShadow: `0 0 0rem 0vw gray, 0 0 0rem 0vh gray, 0 0 2rem rgba(255, 255, 255, 0.2)`
+        },
+        config: {duration: 500}
+
+    })
+
 
     return (
-        <S.Container 
-        style={style} 
-        ref={ref}
-        >
+        <S.Container  >
+        <S.Navigation >
             <Link to='/' >
                 <Avatar 
                 width='40px' height='40px' 
-                onClick={() => setExpanded(true)} 
                 />
             </Link>
             <S.Nav>
@@ -60,6 +39,7 @@ const SideMenu = () => {
                 <Link to='/contact' ><I.ContactIcon  /></Link>
             </S.Nav>
             <S._SocialLinks vertical/>
+        </S.Navigation>
         </S.Container>
     )
 }

@@ -1,12 +1,14 @@
 import React from 'react'
 import * as S from './contactpage.styles'
-import { ContactForm } from '../../components'
+import { ContactForm, Page } from '../../components'
 
 const ContactPage = () => {
     return (
-        <S.Container>
+        <Page>
+            <S.Content>
             <ContactForm />
-        </S.Container>
+            </S.Content>
+        </Page>
     )
 }
 

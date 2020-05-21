@@ -1,34 +1,25 @@
 import styled from 'styled-components'
+import { animated } from 'react-spring'
 
-export const Container = styled.section`
-    min-width: 100vw;
-    height: 100vh;
-`
-
-export const Content = styled.div`
+export const Content = styled(animated.div)`
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     height: 100%;
     max-width: 90rem;
-    margin: auto;
     padding: 2rem;
 
+    @media (min-width: 800px) {
+        padding: 10vh 4rem 10vh 4rem;
+    }
 `
 
-export const Header = styled.div.attrs({
-    className: 'center'
-})`
+export const Header = styled.div`
+    display: flex;
     flex-direction: column;
-`
-
-
-export const Image = styled.img`
-    width: 10rem;
-    height: 10rem;
-    border-radius: 50%;
-    user-select: none;
+    justify-content: center;
+    align-items: center;
 `
 
 export const Name = styled.h2`
@@ -51,6 +42,10 @@ export const Menu = styled.ul`
     align-items: center;
     width: 100%;
     height: 40%;
+
+    a {
+        color: ${p => p.theme.colors.text};
+    }
 
     @media (min-width: 800px) {
         flex-direction: row;

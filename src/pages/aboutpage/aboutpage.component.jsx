@@ -1,7 +1,7 @@
 import React from 'react'
 import * as S from './aboutpage.styles'
 import { PortfolioContext } from '../../providers'
-import { Avatar } from '../../components'
+import { Avatar, Page } from '../../components'
 
 
 const AboutContent = ({children, image}) => {
@@ -41,7 +41,7 @@ const Variable = ({ name, value }) => {
 const AboutPage = ({...props }) => {
     const portfolio = React.useContext(PortfolioContext)
     return (
-        <S.Container {...props}>
+        <Page {...props}>
             <AboutContent image={portfolio.image} >
                 <Variable 
                     name='Name'
@@ -72,7 +72,7 @@ const AboutPage = ({...props }) => {
                 </S.ArrayItem>)}
                 <span> {']'} </span>
             </AboutContent>
-        </S.Container>
+        </Page>
     )
 }
 

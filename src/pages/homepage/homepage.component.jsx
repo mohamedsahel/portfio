@@ -1,7 +1,10 @@
 import React from 'react'
 import * as S from './homepage.styles'
+import { useLocation } from 'react-router-dom'
+import { useSpring } from 'react-spring'
+import { Link } from 'react-router-dom'
 import { PortfolioContext } from '../../providers'
-import { SocialLinks, Avatar } from '../../components'
+import { SocialLinks, Avatar, Page } from '../../components'
 
 
 const Header = ({...props}) => {
@@ -19,9 +22,21 @@ const Header = ({...props}) => {
 const Menu = ({...props}) => {
     return (
         <S.Menu {...props} >
-            <S.MenuItem>ABOUT</S.MenuItem>
-            <S.MenuItem>PROJECTS</S.MenuItem>
-            <S.MenuItem>CONTACT</S.MenuItem>
+            <S.MenuItem>
+                <Link to='/about'>
+                    ABOUT
+                </Link>
+            </S.MenuItem>
+            <S.MenuItem>
+                <Link to='/projects'>
+                    PROJECTS
+                </Link>
+            </S.MenuItem>
+            <S.MenuItem>
+                <Link to='/contact'>
+                    CONTACT
+                </Link>
+            </S.MenuItem>
         </S.Menu>
     )
 }
@@ -29,13 +44,14 @@ const Menu = ({...props}) => {
 
 const HomePage = ({...props}) => {
     return (
-        <S.Container {...props} >
+        <Page {...props} >
             <S.Content>
                 <Header />
                 <Menu />
                 <SocialLinks />
             </S.Content>
-        </S.Container>
+            
+        </Page>
     )
 }
 

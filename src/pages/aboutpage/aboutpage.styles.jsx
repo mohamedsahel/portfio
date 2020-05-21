@@ -1,15 +1,10 @@
 import styled, {css} from 'styled-components'
 
-export const Container = styled.section`
-
-`
-
 export const Content = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 6rem auto ;
-    width: 100%;
+    margin: 6rem auto;
     max-width: 60rem;
     font-family: ${p => p.theme.fonts.code};
     font-size: 2.6rem;

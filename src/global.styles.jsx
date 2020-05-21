@@ -63,13 +63,6 @@ const GlobalStyles = createGlobalStyle`
       }
     } */
 
-    .center {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-
     @media (min-width: 600px) {
         html {
             font-size: 60%;
@@ -79,10 +72,6 @@ const GlobalStyles = createGlobalStyle`
     @media (min-width: 800px) {
         html {
             font-size: 62.7%;
-        }
-
-        section.page {
-          padding-left: 6rem;
         }
     }
 
