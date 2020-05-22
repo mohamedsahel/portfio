@@ -27,7 +27,6 @@ const SideMenu = () => {
 
     return (
         <S.Container  >
-        <S.Navigation >
             <Link to='/' >
                 <Avatar 
                 width='40px' height='40px' 
@@ -39,7 +38,6 @@ const SideMenu = () => {
                 <Link to='/contact' ><I.ContactIcon  /></Link>
             </S.Nav>
             <S._SocialLinks vertical/>
-        </S.Navigation>
         </S.Container>
     )
 }

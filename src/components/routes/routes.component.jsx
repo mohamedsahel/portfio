@@ -8,6 +8,10 @@ import { AboutPage, HomePage, ProjectsPage, ContactPage } from '../..//pages'
 
 
 const Routes = () => {
+    const location = useLocation()
+    React.useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [location])
     return (
         <Switch >
             <Route exact path='/' ><HomePage className='page' /></Route>

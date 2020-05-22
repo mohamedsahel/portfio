@@ -43,7 +43,7 @@ const GlobalStyles = createGlobalStyle`
       max-height: 100%;
     }
 
-    /* @media (pointer: fine) and (hover: hover) {
+    @media (pointer: fine) and (hover: hover) {
       *::-webkit-scrollbar-track {
         border-radius: 1rem;
       }
@@ -61,7 +61,7 @@ const GlobalStyles = createGlobalStyle`
       *::-webkit-scrollbar-thumb:active {
         background-color: ${p => p.theme.colors.gray_2};
       }
-    } */
+    } 
 
     @media (min-width: 600px) {
         html {

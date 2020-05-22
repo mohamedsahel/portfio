@@ -5,6 +5,7 @@ const THEME = {
         text: '#ffffff',
         gradient: ['#ff0000', '#020017'],
         gray_1: '#f0f0f0',
+        gray_2: '#ccc',
         white: '#ffffff',
     },
     fonts: {
