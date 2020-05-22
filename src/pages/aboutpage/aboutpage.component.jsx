@@ -1,20 +1,12 @@
 import React from 'react'
 import * as S from './aboutpage.styles'
-import { useSpring } from 'react-spring'
+import { useFadeIn } from '../../hooks'
 import { PortfolioContext } from '../../providers'
 import { Avatar, Page } from '../../components'
 
 
-const AboutContent = ({children, image}) => {
-    const style = useSpring({
-        transform: 'translateY(0)',
-        opacity: 1,
-        from: {
-            transform: 'translateY(4rem)',
-            opacity: 0,
-        }
-    })
-
+const AboutContent = ({children}) => {
+    const style = useFadeIn()
     return (
         <S.Content style={style}>
             <header>
