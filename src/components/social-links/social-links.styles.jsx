@@ -10,6 +10,9 @@ export const Container = styled.div`
     svg {
         width: 2.6rem;
         height: 2.6rem;
+        path {
+            fill: ${p => p.theme.colors.white};
+        }
     }
 
     ${p => p.vertical && css`

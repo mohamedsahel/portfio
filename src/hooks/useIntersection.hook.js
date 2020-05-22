@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 const DEFAULT_OPTIONS = {
     root: null,
     rootMargin: "0px",
-    threshold: 0.7
+    threshold: 0.4
 }
 
 export default function useInersection(ref, options=DEFAULT_OPTIONS) {

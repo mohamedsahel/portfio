@@ -3,20 +3,22 @@ import {
   BrowserRouter as Router,
  } from 'react-router-dom'
 import GlobalStyles from './global.styles'
-import { ThemeProvider, PortfolioProvider } from './providers'
-import { SideMenu, Routes } from './components'
-import { HomePage } from './pages'
+import { ModeProvider, ThemeProvider, PortfolioProvider } from './providers'
+import { ModeToggler, SideMenu, Routes } from './components'
 
 const App = () => {
   return (
     <PortfolioProvider>
+      <ModeProvider>
       <ThemeProvider>
         <GlobalStyles />
         <Router>
           <SideMenu />
           <Routes />
         </Router>
+        <ModeToggler />
       </ThemeProvider>
+      </ModeProvider>
     </PortfolioProvider>
   )
 }

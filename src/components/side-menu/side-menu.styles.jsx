@@ -16,14 +16,14 @@ export const Container = styled(animated.div)`
     top: 0rem;
     left: 0rem; 
     background: ${p => p.theme.colors.background};
-    box-shadow: 0 0 3rem rgba(255, 255, 255, 0.24);
+    box-shadow: 0 0 3rem ${p => p.theme.colors.shadow_1};
 
     @media (min-width: 800px) {
         flex-direction: column;
         width: 6rem;
         height: 100vh;
         padding: 1rem;
-        box-shadow: 0 0 2.4rem rgba(255, 255, 255, 0.12);
+        box-shadow: 0 0 2.4rem ${p => p.theme.colors.shadow_2};
     }
 `
 
@@ -39,7 +39,7 @@ export const Nav = styled.div`
         width: 2rem;
         height: 2rem;
         path, circle {
-            fill: white;
+            fill: ${p => p.theme.colors.white};
             /* fill: transparent;
             stroke: white;
             stroke-width: 3rem;  */
