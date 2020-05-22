@@ -1,10 +1,19 @@
 import React from 'react'
 import * as S from './project-card.styles'
+import { useSpring, config } from 'react-spring'
+import { useIntersection } from '../../hooks'
 import { Button } from '../../components'
 
 const ProjectCard = ({images, title, description, demoLink, sourceCodeLink, ...props}) => {
+    const ref = React.useRef()
+    const isVisible = useIntersection(ref)
+    const style = useSpring({
+        to: isVisible ? {opacity: 1, transform: 'scale(1)'} : {opacity: 0, transform: 'scale(0.8)'},
+        config: {mass: 1, tension: 180, friction: 13}
+    })
+
     return (
-        <S.Container {...props} >
+        <S.Container {...props} ref={ref} style={style} >
             <S.Images>
                 <S.Image src={images[0]} alt={title} />
                 <S.Image src={images[1]} alt={title} />

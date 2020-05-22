@@ -16,13 +16,14 @@ export const Container = styled(animated.div)`
     top: 0rem;
     left: 0rem; 
     background: ${p => p.theme.colors.background};
-    box-shadow: 0 0 3rem rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 3rem rgba(255, 255, 255, 0.24);
 
     @media (min-width: 800px) {
         flex-direction: column;
         width: 6rem;
         height: 100vh;
         padding: 1rem;
+        box-shadow: 0 0 2.4rem rgba(255, 255, 255, 0.12);
     }
 `
 

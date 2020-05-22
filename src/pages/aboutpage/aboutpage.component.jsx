@@ -1,12 +1,22 @@
 import React from 'react'
 import * as S from './aboutpage.styles'
+import { useSpring } from 'react-spring'
 import { PortfolioContext } from '../../providers'
 import { Avatar, Page } from '../../components'
 
 
 const AboutContent = ({children, image}) => {
+    const style = useSpring({
+        transform: 'translateY(0)',
+        opacity: 1,
+        from: {
+            transform: 'translateY(4rem)',
+            opacity: 0,
+        }
+    })
+
     return (
-        <S.Content>
+        <S.Content style={style}>
             <header>
                 <span>Const</span>
                  <Avatar width='11rem' height='11rem' /> 
@@ -26,7 +36,7 @@ const AboutContent = ({children, image}) => {
 const Variable = ({ name, value }) => {
     const quote = Number(value) || value === '[' ? '' : '"'
     return (
-        <S.Variable>
+        <S.Variable  >
             <div> {name} 
                 <span> : {value === '[' && '['} </span>
             </div>
@@ -41,7 +51,7 @@ const Variable = ({ name, value }) => {
 const AboutPage = ({...props }) => {
     const portfolio = React.useContext(PortfolioContext)
     return (
-        <Page {...props}>
+        <Page {...props} >
             <AboutContent image={portfolio.image} >
                 <Variable 
                     name='Name'

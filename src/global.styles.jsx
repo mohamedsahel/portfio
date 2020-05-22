@@ -56,10 +56,11 @@ const GlobalStyles = createGlobalStyle`
       *::-webkit-scrollbar-thumb {
         border-radius: 10px;
         background-color: ${p => p.theme.colors.gray_1};
-      }
 
-      *::-webkit-scrollbar-thumb:active {
-        background-color: ${p => p.theme.colors.gray_2};
+        &:active {
+          background-color: ${p => p.theme.colors.gray_2};
+        }
+
       }
     } 
 

@@ -1,6 +1,7 @@
 import styled, {css} from 'styled-components'
+import { animated } from 'react-spring'
 
-export const Content = styled.div`
+export const Content = styled(animated.div)`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -53,6 +54,7 @@ export const Variable = styled.div`
         font-weight: 400;
         display: inline-flex;
         justify-content: space-between;
+        white-space: nowrap;
 
         span {
             margin-left: 1rem;

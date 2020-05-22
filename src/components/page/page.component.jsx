@@ -4,15 +4,15 @@ import { useSpring } from 'react-spring'
 
 
 const Page = ({children, ...props}) => {
-    const style = useSpring({
-        opacity: 1, 
-        transform: 'scale(1)',
-        from: {
-            opacity: 0,
-            transform: 'scale(0.5)',
-        }
-    })
-    return <S.Container {...props} style={style} > {children} </S.Container>
+    // const style = useSpring({
+    //     opacity: 1, 
+    //     transform: 'translateY(0)',
+    //     from: {
+    //         opacity: 0,
+    //         transform: 'translateY(5rem)',
+    //     }
+    // })
+    return <S.Container {...props} > {children} </S.Container>
 }
 
 export default Page

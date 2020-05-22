@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { animated } from 'react-spring'
 
-export const Container = styled.div`
+export const Container = styled(animated.div)`
     display: flex;
     flex-direction: column;
     font-size: 1.7rem;
