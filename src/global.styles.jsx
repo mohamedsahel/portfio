@@ -1,5 +1,20 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle, keyframes } from 'styled-components'
 
+
+const dash = keyframes`
+   to {
+      stroke-dashoffset: 0;
+    }
+   
+`
+
+const fill = props => keyframes`
+    to {
+        fill: ${props.theme.colors.text};
+        stroke-width: 0;
+    }
+   
+`
 
 const GlobalStyles = createGlobalStyle`
     *, *::after, *::before {
@@ -41,6 +56,15 @@ const GlobalStyles = createGlobalStyle`
     img, video, svg {
       max-width: 100%;
       max-height: 100%;
+    }
+
+    svg.animated path, circle{
+      fill: transparent;
+      stroke: ${p => p.theme.colors.text};
+      stroke-width: 3rem; 
+      stroke-dasharray: 2000;
+      stroke-dashoffset: 2000;
+      animation: ${dash} 2s ease forwards 1.6s, ${p => fill} 0.6s ease forwards 2.6s;
     }
 
     @media (pointer: fine) and (hover: hover) {

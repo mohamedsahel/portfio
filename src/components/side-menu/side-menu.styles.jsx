@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { animated } from 'react-spring'
 import { SocialLinks } from '..'
 
@@ -38,12 +38,6 @@ export const Nav = styled.div`
     svg {
         width: 2rem;
         height: 2rem;
-        path, circle {
-            fill: ${p => p.theme.colors.white};
-            /* fill: transparent;
-            stroke: white;
-            stroke-width: 3rem;  */
-        }
     }
 
     @media (min-width: 800px) {
