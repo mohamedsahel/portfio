@@ -11,7 +11,7 @@ const ContactPage = () => {
         <Page>
             <S.Content style={style} >
                 <S.ContactHeader>
-                    <p>Contact me on <a href={socialLinks.twitter} target='_blank' >Twitter</a></p>
+                    <p>Contact me on <a href={socialLinks.twitter} target='_blank' rel='noopener noreferrer'>Twitter</a></p>
                     <span>or</span>
                     <h3>Send Message</h3>
                 </S.ContactHeader>

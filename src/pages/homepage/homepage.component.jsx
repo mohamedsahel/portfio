@@ -1,7 +1,5 @@
 import React from 'react'
 import * as S from './homepage.styles'
-import { useLocation } from 'react-router-dom'
-import { useSpring } from 'react-spring'
 import { Link } from 'react-router-dom'
 import { PortfolioContext } from '../../providers'
 import { SocialLinks, Avatar, Page } from '../../components'

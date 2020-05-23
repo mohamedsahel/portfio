@@ -58,7 +58,7 @@ const GlobalStyles = createGlobalStyle`
       max-height: 100%;
     }
 
-    svg.animated path, circle{
+    svg.animated path, svg.animated circle{
       fill: transparent;
       stroke: ${p => p.theme.colors.text};
       stroke-width: 3rem; 

@@ -1,6 +1,6 @@
 import React from 'react'
 import * as S from './project-card.styles'
-import { useSpring, config } from 'react-spring'
+import { useSpring } from 'react-spring'
 import { useIntersection } from '../../hooks'
 import { Button } from '../../components'
 

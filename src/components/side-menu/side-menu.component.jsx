@@ -2,7 +2,7 @@ import React from 'react'
 import * as S from './side-menu.styles'
 import { useSpring } from 'react-spring'
 import { useMediaQuery } from '../../hooks'
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { Avatar } from '..'
 import I from '../../assests/icons'
 
