@@ -44,7 +44,7 @@ const PORTFOLIO = {
                 'https://i.imgur.com/UTzXGWR.png?1',
             ],
             demoLink: 'http://mohamedsahel.herokuapp.com',
-            sourceCodeLink: 'https://github.com/mohamedsahel/portfolio',
+            sourceCodeLink: 'https://github.com/mohamedsahel/personal-portfolio',
         },
     ]
 }
