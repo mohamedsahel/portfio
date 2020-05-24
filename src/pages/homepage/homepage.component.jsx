@@ -1,54 +1,35 @@
 import React from 'react'
 import * as S from './homepage.styles'
+import { animated } from 'react-spring'
 import { Link } from 'react-router-dom'
 import { PortfolioContext } from '../../providers'
-import { SocialLinks, Avatar, Page } from '../../components'
+import { Page, Button } from '../../components'
+import { useFadeIn } from '../../hooks'
 
-
-const Header = ({...props}) => {
-    const { name, job } = React.useContext(PortfolioContext)
-    return (
-        <S.Header {...props} >
-            <Avatar width='10rem' height='10rem' />
-            <S.Name> {name} </S.Name>
-            <S.Job> {job} </S.Job>
-        </S.Header>
-    )
-}
-
-
-const Menu = ({...props}) => {
-    return (
-        <S.Menu {...props} >
-            <S.MenuItem>
-                <Link to='/about'>
-                    ABOUT
-                </Link>
-            </S.MenuItem>
-            <S.MenuItem>
-                <Link to='/projects'>
-                    PROJECTS
-                </Link>
-            </S.MenuItem>
-            <S.MenuItem>
-                <Link to='/contact'>
-                    CONTACT
-                </Link>
-            </S.MenuItem>
-        </S.Menu>
-    )
-}
 
 
 const HomePage = ({...props}) => {
+    const { name, job } = React.useContext(PortfolioContext)
+    const sharedParams = [
+        '6rem',
+        {
+            delay: 800
+        }
+    ]
+    const styleLeft = useFadeIn('left', ...sharedParams)
+    const styleRight = useFadeIn('right', ...sharedParams)
+    const styleTop = useFadeIn('top', ...sharedParams)
     return (
         <Page {...props} >
-            <S.Content>
-                <Header />
-                <Menu />
-                <SocialLinks />
+            <S.Content >
+                <animated.h3 style={styleTop} >Hi,</animated.h3>
+                <animated.h3 style={styleRight} >I am {name}</animated.h3>
+                <animated.h3 style={styleLeft} >{job}</animated.h3>
+                <Link to='/contact' >
+                    <Button>CONTACT ME</Button>
+                </Link>
+                <S._SocialLinks />
             </S.Content>
-            
         </Page>
     )
 }

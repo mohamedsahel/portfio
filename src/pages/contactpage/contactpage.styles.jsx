@@ -32,7 +32,4 @@ export const ContactHeader = styled.div`
         font-size: 2.6rem;
     }
 
-    @media (min-width: 800px) {
-        display: none;
-    }
 `

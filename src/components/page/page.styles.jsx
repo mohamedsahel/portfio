@@ -6,10 +6,10 @@ export const Container = styled(animated.section)`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 6rem;
+    padding-top: 6rem;
 
     @media (min-width: 800px) {
-        margin-left: 6rem;
-        margin-top: 0rem;
+        padding-left: 6rem;
+        padding-top: 0rem;
     }
 `

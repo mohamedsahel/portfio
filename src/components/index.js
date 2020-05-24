@@ -1,4 +1,3 @@
-export { default as WelcomeLayer } from './welcome-layer/welcome-layer.component'
 export { default as DotsLoader } from './dots-loader/dots-loader.component'
 export { default as Avatar } from './avatar/avatar.component'
 export { default as Button } from './button/button.component'
