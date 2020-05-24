@@ -66,13 +66,21 @@ const AboutPage = ({...props }) => {
                     value={portfolio.bigInterest}
                 />
                 <Variable 
+                    name='About me'
+                    value={portfolio.about}
+                />
+                {/* <Variable 
+                    name='Thoughts'
+                    value={portfolio.thoughts}
+                /> */}
+                {/* <Variable 
                     name='Thoughts'
                     value='['
                 />
                 {portfolio.thoughts.map((thought, index) => <S.ArrayItem key={index} >
                     " {thought} " ,
                 </S.ArrayItem>)}
-                <span> {']'} </span>
+                <span> {']'} </span> */}
             </AboutContent>
         </Page>
     )
