@@ -35,6 +35,17 @@ const PORTFOLIO = {
             demoLink: 'http://weathi.herokuapp.com',
             sourceCodeLink: 'https://github.com/mohamedsahel/weathi',
         },
+        {
+            id: 3,
+            title: 'Personal Portfolio',
+            description: 'Open source portfolio, built using react, (actually you are browsing it now)',
+            images: [
+                'https://i.imgur.com/GQwpQCo.png?1',
+                'https://i.imgur.com/UTzXGWR.png?1',
+            ],
+            demoLink: 'http://mohamedsahel.herokuapp.com',
+            sourceCodeLink: 'https://github.com/mohamedsahel/portfolio',
+        },
     ]
 }
 

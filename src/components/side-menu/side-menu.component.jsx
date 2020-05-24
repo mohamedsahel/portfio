@@ -23,10 +23,10 @@ const SideMenu = () => {
                 />
             </Link>
             <S.Nav>
-                <Link to='/about' ><I.AboutIcon 
+                <Link to='/about' title='about me' ><I.AboutIcon 
                 className='animated' /></Link>
-                <Link to='/projects' ><I.ProjectsIcon className='animated'  /></Link>
-                <Link to='/contact' ><I.ContactIcon className='animated'  /></Link>
+                <Link to='/projects'  title='my work'><I.ProjectsIcon className='animated'  /></Link>
+                <Link to='/contact'  title='contact me'><I.ContactIcon className='animated'  /></Link>
             </S.Nav>
             <S._SocialLinks vertical/>
         </S.Container>
