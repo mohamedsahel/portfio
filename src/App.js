@@ -4,7 +4,7 @@ import {
  } from 'react-router-dom'
 import GlobalStyles from './global.styles'
 import { ModeProvider, ThemeProvider, PortfolioProvider } from './providers'
-import { ModeToggler, SideMenu, Routes } from './components'
+import { ModeToggler, SideMenu, Routes, Particles } from './components'
 
 const App = () => {
   return (
@@ -12,6 +12,7 @@ const App = () => {
       <ModeProvider>
       <ThemeProvider>
         <GlobalStyles />
+        <Particles />
         <Router>
           <SideMenu />
           <Routes />

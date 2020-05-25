@@ -4,7 +4,7 @@ import { animated } from 'react-spring'
 import { Link } from 'react-router-dom'
 import { PortfolioContext } from '../../providers'
 import { Page, Button } from '../../components'
-import { useFadeIn } from '../../hooks'
+import { useFadeIn, useZoom } from '../../hooks'
 
 
 
@@ -13,12 +13,14 @@ const HomePage = ({...props}) => {
     const sharedParams = [
         '6rem',
         {
-            delay: 800
+            delay: 500
         }
     ]
     const styleLeft = useFadeIn('left', ...sharedParams)
     const styleRight = useFadeIn('right', ...sharedParams)
     const styleTop = useFadeIn('top', ...sharedParams)
+    const styleZoom = useZoom()
+    const AnimatedButton = animated(Button)
     return (
         <Page {...props} >
             <S.Content >
@@ -26,7 +28,7 @@ const HomePage = ({...props}) => {
                 <animated.h3 style={styleRight} >I am {name}</animated.h3>
                 <animated.h3 style={styleLeft} >{job}</animated.h3>
                 <Link to='/contact' >
-                    <Button>CONTACT ME</Button>
+                    <AnimatedButton style={styleZoom} >CONTACT ME</AnimatedButton>
                 </Link>
                 <S._SocialLinks />
             </S.Content>

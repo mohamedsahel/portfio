@@ -67,6 +67,12 @@ const GlobalStyles = createGlobalStyle`
       animation: ${dash} 2s ease forwards 1.6s, ${p => fill} 0.6s ease forwards 2.6s;
     }
 
+    /* #tsparticles {
+      position: fixed;
+      height: 100%;
+      width: 100%;
+    } */
+
     @media (pointer: fine) and (hover: hover) {
       *::-webkit-scrollbar-track {
         border-radius: 1rem;

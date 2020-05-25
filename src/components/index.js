@@ -7,6 +7,7 @@ export { default as ProjectCard } from './project-card/project-card.component'
 export { default as Field } from './field/field.component'
 export { default as ContactForm } from './contact-form/contact-form.component'
 export { default as SideMenu } from './side-menu/side-menu.component'
+export { default as Particles } from './particles/particles.component'
 
 
 

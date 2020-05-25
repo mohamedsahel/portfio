@@ -38,8 +38,9 @@ export const Content = styled(animated.div)`
 
 
 export const _SocialLinks = styled(SocialLinks)`
-    position: absolute;
+    position: fixed;
     bottom: 2rem;
+    max-width: 70%;
 
 
     @media (min-width: 800px) {

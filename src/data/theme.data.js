@@ -22,7 +22,7 @@ export const LIGHT_THEME = {
     colors: {
         background: '#ffffff',
         text: '#020017',
-        gray_1: '#4f4f4f',
+        gray_1: '#2c2c2c',
         gray_2: '#000000',
         white: '#020017',
         shadow_1: 'rgba(0, 0, 0, 0.12)',

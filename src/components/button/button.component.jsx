@@ -1,6 +1,6 @@
 import React from 'react'
 import * as S from './button.styles'
-import {useSpring} from 'react-spring'
+import { useSpring } from 'react-spring'
 
 const Ripple = ({left, top}) => {
     const from = {
